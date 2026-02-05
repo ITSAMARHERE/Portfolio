@@ -79,7 +79,7 @@ const Certifications = () => {
               whileHover={{ y: -5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
+              <Card className="shadow-lg hover:shadow-xl smooth-transition hover-lift border-2 h-full bg-card">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <motion.div 
@@ -138,7 +138,7 @@ const Certifications = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
             Leadership & <span className="text-gradient">Activities</span>
           </h3>
-          <Card className="elegant-shadow border-primary/20 max-w-4xl mx-auto">
+          <Card className="shadow-lg border-2 max-w-4xl mx-auto bg-card">
             <CardContent className="p-8">
               <div className="flex items-start gap-6">
                 <motion.div 
