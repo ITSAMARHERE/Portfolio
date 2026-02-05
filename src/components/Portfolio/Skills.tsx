@@ -100,7 +100,11 @@ const Skills = () => {
                 key={index}
                 variants={cardVariants}
                 whileHover={{ scale: 1.05 }}
+                whileFocus={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                tabIndex={0}
+                role="article"
+                aria-label={`${category.title} skills`}
               >
                 <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
                   <CardHeader className="text-center pb-4">

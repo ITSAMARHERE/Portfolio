@@ -121,8 +121,13 @@ const Projects = () => {
               variants={cardVariants}
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
+              onFocus={() => setHoveredIndex(index)}
+              onBlur={() => setHoveredIndex(null)}
               whileHover={{ y: -10 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              tabIndex={0}
+              role="article"
+              aria-label={`Project: ${project.title}`}
             >
               <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 group h-full relative overflow-hidden">
                 {/* Gradient overlay on hover */}

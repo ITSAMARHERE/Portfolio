@@ -137,10 +137,7 @@ const Contact = () => {
               <CardContent>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <motion.div
-                      whileFocus={{ scale: 1.02 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
+                    <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
                         First Name
                       </label>
@@ -148,11 +145,8 @@ const Contact = () => {
                         placeholder="John" 
                         className="border-primary/20 focus:border-primary smooth-transition" 
                       />
-                    </motion.div>
-                    <motion.div
-                      whileFocus={{ scale: 1.02 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
+                    </div>
+                    <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
                         Last Name
                       </label>
@@ -160,7 +154,7 @@ const Contact = () => {
                         placeholder="Doe" 
                         className="border-primary/20 focus:border-primary smooth-transition" 
                       />
-                    </motion.div>
+                    </div>
                   </div>
 
                   <div>
