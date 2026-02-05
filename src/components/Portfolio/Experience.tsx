@@ -24,6 +24,20 @@ const Experience = () => {
       ],
       skills: ["SQL", "Database Design", "Backend APIs", "Data Analysis", "Python"],
       current: false
+    },
+    {
+      title: "Data Analytics Intern",
+      company: "Deloitte",
+      location: "Virtual, Australia",
+      period: "2024",
+      type: "Virtual Internship",
+      responsibilities: [
+        "Completed Deloitte's job simulation on data analysis & forensic technology",
+        "Designed an interactive data dashboard in Tableau for business insights",
+        "Used Excel to classify large datasets and draw actionable conclusions"
+      ],
+      skills: ["Tableau", "Excel", "Data Analysis", "Forensic Technology", "Business Intelligence"],
+      current: false
     }
   ];
 
@@ -68,7 +82,7 @@ const Experience = () => {
             Professional <span className="text-gradient">Experience</span>
           </h2>
           <p className="text-muted text-lg max-w-3xl mx-auto">
-            Software development internship focused on data analysis and backend optimization
+            Professional internships in software development, data analytics, and business intelligence
           </p>
         </motion.div>
 
