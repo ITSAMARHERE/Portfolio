@@ -12,82 +12,62 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Campus Care – AI Mental Health Platform",
+      title: "Campus Care – Digital Mental Health Platform",
       period: "08/2025 – 11/2025",
-      description: "Production-ready AI platform leveraging real-time emotion detection and behavioral pattern analysis to improve student mental wellbeing. Deployed ML models for sentiment analysis and personalized intervention recommendations.",
-      technologies: ["Python", "TensorFlow", "NLP", "React", "Node.js", "MongoDB", "Real-time Processing"],
+      description: "AI-powered mental health platform for students with real-time emotion detection and behavioral analysis. Built data pipelines for processing student interactions.",
+      technologies: ["Python", "TensorFlow", "NLP", "React", "Node.js", "MongoDB"],
       highlights: [
-        "Developed and deployed emotion detection ML model with 85% accuracy",
-        "Built real-time data pipeline processing 10K+ student interactions daily",
-        "Implemented NLP-based sentiment analysis for personalized insights",
-        "Engineered scalable backend architecture handling concurrent AI inference"
+        "Analyzed student interaction and emotion data to identify behavioral patterns",
+        "Developed real-time AI-based emotion detection pipelines",
+        "Processed and structured datasets using Python for behavioral analysis",
+        "Generated actionable insights to improve system responsiveness"
       ],
       metrics: {
-        users: "AI-Powered",
-        performance: "Real-time ML",
+        users: "Students",
+        performance: "Real-time AI",
         type: "Mental Health AI"
       },
-      aiTags: ["NLP", "Deep Learning", "Real-time AI"],
+      aiTags: ["NLP", "Data Analysis", "Real-time Processing"],
       githubUrl: "https://github.com/ITSAMARHERE/Campus-Care",
       demoUrl: "#"
     },
     {
-      title: "AI Tutor Platform",
-      period: "Ongoing",
-      description: "Intelligent personalized learning system powered by LLM integration and adaptive algorithms. Features AI-generated content, automated assessment, and real-time student progress tracking.",
-      technologies: ["LLM APIs", "Python", "Next.js", "TypeScript", "PostgreSQL", "Vector DB"],
-      highlights: [
-        "Integrated GPT-4 for personalized tutoring and content generation",
-        "Built adaptive learning algorithm adjusting to student performance",
-        "Implemented RAG (Retrieval-Augmented Generation) for knowledge base",
-        "Designed responsive full-stack application with modern UI/UX"
-      ],
-      metrics: {
-        users: "LLM-Powered",
-        performance: "Adaptive AI",
-        type: "EdTech AI"
-      },
-      aiTags: ["LLM", "RAG", "Personalization"],
-      githubUrl: "https://github.com/ITSAMARHERE",
-      demoUrl: "#"
-    },
-    {
-      title: "ECommerce Platform with ML Recommendations",
+      title: "ECommerce Platform with Admin Panel",
       period: "04/2025 – 06/2025",
-      description: "Full-stack e-commerce solution with AI-powered product recommendations and intelligent search. Achieved 30% performance improvement through optimized database architecture and caching strategies.",
-      technologies: ["React", "Redux Toolkit", "Node.js", "MongoDB", "Redis", "ML APIs"],
+      description: "Full-stack e-commerce platform with comprehensive admin dashboard. Optimized database queries achieving 30% faster response times.",
+      technologies: ["React", "Redux Toolkit", "Node.js", "MongoDB", "Tailwind CSS"],
       highlights: [
-        "Developed collaborative filtering recommendation engine",
-        "Implemented full-stack platform with React and Node.js",
-        "Optimized database queries achieving ~30% faster response times",
-        "Built role-based access control and secure payment integration"
+        "Developed full-stack platform with React and Node.js",
+        "Optimized database queries achieving ~30% improvement in response time",
+        "Implemented role-based access control for admin operations",
+        "Designed scalable architecture for product management"
       ],
       metrics: {
         performance: "30% faster",
         improvement: "Response Time",
-        type: "E-commerce + AI"
+        type: "E-commerce"
       },
-      aiTags: ["Recommendations", "ML"],
+      aiTags: ["Full Stack"],
       githubUrl: "https://github.com/ITSAMARHERE/ECommerce-",
       demoUrl: "https://ecommerce-1-sur7.onrender.com/auth/login"
     },
     {
-      title: "Talka - Real-Time Chat with Smart Features",
+      title: "Talka - Real-Time Chat Application",
       period: "01/2025 – 03/2025",
-      description: "Scalable real-time messaging platform with intelligent data architecture and smart message categorization. Designed to handle high concurrent loads with optimized WebSocket connections.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Redis", "Data Architecture"],
+      description: "Scalable real-time messaging platform with intelligent data architecture. Designed for concurrent user handling with optimized message storage.",
+      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
       highlights: [
-        "Architected scalable real-time messaging infrastructure",
+        "Analyzed chat usage patterns and user activity data",
         "Designed optimized database schemas for message storage and retrieval",
-        "Implemented intelligent message categorization and search",
-        "Built comprehensive chat analytics and user activity tracking"
+        "Implemented scalability features for concurrent user handling",
+        "Built real-time communication infrastructure"
       ],
       metrics: {
         users: "Concurrent",
         performance: "Real-time",
         type: "Chat Platform"
       },
-      aiTags: ["Data Architecture"],
+      aiTags: ["Real-time", "Data Architecture"],
       githubUrl: "https://github.com/ITSAMARHERE/Talka",
       demoUrl: "https://talka.onrender.com/login"
     }
@@ -124,11 +104,11 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Featured <span className="gradient-text">Projects</span>
+          <h2 className="heading-secondary text-foreground mb-4">
+            Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            AI-powered and data-driven applications showcasing technical depth and real-world impact
+          <p className="text-muted text-lg max-w-3xl mx-auto">
+            Real-world applications showcasing AI/ML and full-stack development capabilities
           </p>
         </motion.div>
 

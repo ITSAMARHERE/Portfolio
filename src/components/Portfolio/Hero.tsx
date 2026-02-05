@@ -98,12 +98,12 @@ const Hero = () => {
               </motion.p>
               <motion.h1 
                 variants={itemVariants}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+                className="heading-primary text-white mb-6"
               >
-                Amar <span className="gradient-text">Pal</span>
+                Amar <span className="text-gradient">Pal</span>
               </motion.h1>
               
-              {/* Animated Role Switcher */}
+              {/* Animated Role Switcher with Gradient */}
               <div className="h-16 flex items-center">
                 <AnimatePresence mode="wait">
                   <motion.h2
@@ -112,7 +112,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent"
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-gradient-purple"
                   >
                     {roles[currentRole]}
                   </motion.h2>
@@ -122,10 +122,10 @@ const Hero = () => {
 
             <motion.div variants={itemVariants} className="space-y-6">
               <motion.p 
-                className="text-white/80 text-lg md:text-xl leading-relaxed max-w-2xl"
+                className="text-white/85 text-lg md:text-xl leading-relaxed max-w-2xl"
               >
-                Building production-ready AI systems, scalable web applications, and data-driven solutions. 
-                Specializing in end-to-end development from model training to cloud deployment.
+                Building intelligent systems with <span className="text-white font-semibold">AI/ML</span> and scalable 
+                web applications. Focused on delivering data-driven solutions from model development to production deployment.
               </motion.p>
             </motion.div>
 

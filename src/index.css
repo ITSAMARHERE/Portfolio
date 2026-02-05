@@ -130,7 +130,7 @@ All colors MUST be HSL.
     transition-duration: 200ms;
   }
 
-  /* Typography improvements */
+  /* Typography System */
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
     line-height: 1.2;
@@ -155,6 +155,34 @@ All colors MUST be HSL.
 
   p {
     @apply text-muted-foreground leading-relaxed;
+  }
+
+  /* Reusable Typography Classes */
+  .heading-primary {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .heading-secondary {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .text-muted {
+    @apply text-muted-foreground opacity-80;
+    line-height: 1.7;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  .text-gradient-purple {
+    @apply bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-clip-text text-transparent dark:from-purple-400 dark:via-blue-400 dark:to-purple-400;
+    background-size: 200% auto;
   }
 
   .text-balance {

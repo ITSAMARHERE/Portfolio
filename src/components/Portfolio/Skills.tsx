@@ -12,25 +12,25 @@ const Skills = () => {
     {
       title: "AI & Machine Learning",
       icon: Brain,
-      skills: ["Python", "TensorFlow", "PyTorch", "NLP", "CNN", "Transformers", "LLM APIs", "NumPy", "Pandas"],
+      skills: ["Python", "TensorFlow", "NLP", "Deep Learning", "NumPy", "Pandas"],
       color: "bg-purple-500/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400"
     },
     {
       title: "Frontend Development",
       icon: Code,
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Framer Motion"],
+      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"],
       color: "bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400"
     },
     {
       title: "Backend Development",
       icon: Database,
-      skills: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "MySQL", "REST APIs", "GraphQL"],
+      skills: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "MySQL", "REST APIs"],
       color: "bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400"
     },
     {
-      title: "DevOps & Tools",
+      title: "Tools & Platforms",
       icon: Wrench,
-      skills: ["Git", "GitHub", "Docker", "CI/CD", "Vercel", "Supabase", "Postman"],
+      skills: ["Git", "GitHub", "Postman", "Vercel", "Supabase"],
       color: "bg-orange-500/10 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400"
     },
     {
@@ -38,12 +38,6 @@ const Skills = () => {
       icon: Award,
       skills: ["Data Structures", "Algorithms", "Operating Systems", "DBMS", "Computer Networks", "OOP"],
       color: "bg-red-500/10 text-red-600 dark:bg-red-500/20 dark:text-red-400"
-    },
-    {
-      title: "Professional Skills",
-      icon: Users,
-      skills: ["System Design", "Clean Architecture", "Problem Solving", "Team Leadership", "Communication"],
-      color: "bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-400"
     }
   ];
 
@@ -79,11 +73,11 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Technical <span className="gradient-text">Stack</span>
+          <h2 className="heading-secondary text-foreground mb-4">
+            Technical <span className="text-gradient">Skills</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Comprehensive expertise in AI/ML development, full-stack engineering, and scalable system architecture
+          <p className="text-muted text-lg max-w-3xl mx-auto">
+            Core competencies in AI/ML, full-stack development, and computer science fundamentals
           </p>
         </motion.div>
 

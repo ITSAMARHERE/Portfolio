@@ -47,11 +47,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Get In <span className="gradient-text">Touch</span>
+          <h2 className="heading-secondary text-foreground mb-4">
+            Get In <span className="text-gradient">Touch</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life
+          <p className="text-muted text-lg max-w-3xl mx-auto">
+            Open to opportunities in AI/ML engineering and full-stack development
           </p>
         </motion.div>
 

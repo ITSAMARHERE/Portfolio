@@ -64,11 +64,11 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Professional <span className="gradient-text">Experience</span>
+          <h2 className="heading-secondary text-foreground mb-4">
+            Professional <span className="text-gradient">Experience</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Building expertise in data-driven development and backend system architecture
+          <p className="text-muted text-lg max-w-3xl mx-auto">
+            Software development internship focused on data analysis and backend optimization
           </p>
         </motion.div>
 

@@ -40,11 +40,11 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About <span className="gradient-text">Me</span>
+          <h2 className="heading-secondary text-foreground mb-4">
+            About <span className="text-gradient">Me</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Get to know more about my background, education, and what drives my passion for technology
+          <p className="text-muted text-lg max-w-3xl mx-auto">
+            Background, education, and technical interests
           </p>
         </motion.div>
 
@@ -132,20 +132,18 @@ const About = () => {
           <motion.div variants={cardVariants}>
             <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Professional Profile</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">About</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm mb-4">
-                  AI & Machine Learning Engineer with expertise in building production-ready intelligent systems. 
-                  Specialized in developing end-to-end AI solutions — from data preprocessing and model training 
-                  to API integration and cloud deployment.
+                  <span className="text-gradient-purple font-semibold">AI & Machine Learning Engineer</span> and 
+                  <span className="text-gradient-purple font-semibold"> Full Stack Developer</span> specializing in building 
+                  intelligent data-driven applications.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-sm mb-4">
-                  Strong foundation in deep learning, NLP pipelines, and LLM integration. Experienced in building 
-                  scalable full-stack applications with modern frameworks (React, Next.js, Node.js) and architecting 
-                  robust backend systems with optimized database design.
+                  Strong foundation in machine learning, deep learning fundamentals, and NLP. Experienced in developing 
+                  full-stack applications with React, Next.js, and Node.js, combined with backend optimization and database design.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  Passionate about applying AI to solve real-world problems in education, mental health, and automation. 
-                  Proven ability to deliver data-driven solutions with measurable business impact.
+                  Passionate about applying AI to real-world problems in education, mental health, and automation.
                 </p>
               </CardContent>
             </Card>

@@ -58,11 +58,11 @@ const Certifications = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Certifications & <span className="gradient-text">Learning</span>
+          <h2 className="heading-secondary text-foreground mb-4">
+            Certifications & <span className="text-gradient">Leadership</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Continuous learning and professional development in AI/ML and software engineering
+          <p className="text-muted text-lg max-w-3xl mx-auto">
+            Professional development and team leadership experience
           </p>
         </motion.div>
 
@@ -136,7 +136,7 @@ const Certifications = () => {
           className="mt-16"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
-            Leadership & <span className="gradient-text">Activities</span>
+            Leadership & <span className="text-gradient">Activities</span>
           </h3>
           <Card className="elegant-shadow border-primary/20 max-w-4xl mx-auto">
             <CardContent className="p-8">
