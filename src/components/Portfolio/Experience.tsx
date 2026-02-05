@@ -15,13 +15,11 @@ const Experience = () => {
       location: "Pune, India",
       period: "08/2025 – 01/2026",
       type: "Internship",
-      responsibilities: [
-        "Analyzed and structured application data using relational database models to optimize data flow",
-        "Designed and implemented optimized SQL queries improving data retrieval efficiency by 25%",
-        "Developed backend APIs to collect, process, and validate data for business logic implementation",
-        "Collaborated with cross-functional teams to ensure data accuracy and consistency across systems",
-        "Prepared and structured datasets for analytics and reporting, enabling data-driven decision-making"
-      ],
+responsibilities: [
+  "Built a full-stack Django web application, implementing scalable backend architecture using Django models, views, and routing.",
+  "Integrated HTMX for dynamic partial page updates, enhancing interactivity without full page reloads.",
+  "Developed a drag-and-drop block-based JavaScript interface and designed a fully responsive UI using Tailwind CSS, ensuring seamless user experience across devices."
+],
       skills: ["SQL", "Database Design", "Backend APIs", "Data Analysis", "Python"],
       current: false
     },
@@ -137,10 +135,10 @@ const Experience = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <Card 
-                      className={`shadow-lg hover:shadow-xl smooth-transition hover-lift border-l-4 ${
+                      className={`elegant-shadow smooth-transition hover-lift border-l-4 ${
                         exp.current 
                           ? 'border-l-primary bg-primary/5 shadow-xl' 
-                          : 'border-l-muted hover:border-l-primary/50 bg-card'
+                          : 'border-l-muted hover:border-l-primary/50'
                       }`}
                     >
                       <CardHeader>
