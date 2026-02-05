@@ -41,11 +41,22 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // EmailJS configuration
-      // Replace these with your actual EmailJS credentials
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
+      // EmailJS configuration - validate environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const toEmail = import.meta.env.VITE_CONTACT_EMAIL || "tmsl.aiml.amarpal@gmail.com";
+
+      // Validate that required environment variables are set
+      if (!serviceId || !templateId || !publicKey) {
+        console.error("EmailJS configuration missing. Please check CONTACT_FORM_SETUP.md for setup instructions.");
+        toast({
+          title: "Configuration Error",
+          description: "Email service is not properly configured. Please contact the site owner directly.",
+          variant: "destructive",
+        });
+        return;
+      }
 
       // Prepare the email parameters
       const templateParams = {
@@ -53,7 +64,7 @@ const Contact = () => {
         from_email: data.email,
         subject: data.subject,
         message: data.message,
-        to_email: "tmsl.aiml.amarpal@gmail.com",
+        to_email: toEmail,
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);

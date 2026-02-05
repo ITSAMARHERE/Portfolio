@@ -57,9 +57,11 @@ This message was sent from your portfolio contact form.
 VITE_EMAILJS_SERVICE_ID=your_service_id_here
 VITE_EMAILJS_TEMPLATE_ID=your_template_id_here
 VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
+VITE_CONTACT_EMAIL=tmsl.aiml.amarpal@gmail.com
 ```
 
 3. Replace the placeholder values with your actual EmailJS credentials
+4. Update `VITE_CONTACT_EMAIL` with your preferred contact email (optional - defaults to tmsl.aiml.amarpal@gmail.com)
 
 ### 6. Test the Contact Form
 
