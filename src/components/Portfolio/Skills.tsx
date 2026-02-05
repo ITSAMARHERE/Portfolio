@@ -100,7 +100,7 @@ const Skills = () => {
                 role="article"
                 aria-label={`${category.title} skills`}
               >
-                <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
+                <Card className="shadow-lg hover:shadow-xl smooth-transition hover-lift border-2 h-full bg-card">
                   <CardHeader className="text-center pb-4">
                     <motion.div 
                       initial={{ scale: 0, rotate: -180 }}

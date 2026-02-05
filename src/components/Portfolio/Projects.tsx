@@ -132,7 +132,7 @@ const Projects = () => {
               role="article"
               aria-label={`Project: ${project.title}`}
             >
-              <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 group h-full relative overflow-hidden">
+              <Card className="shadow-lg hover:shadow-xl smooth-transition hover-lift border-2 group h-full relative overflow-hidden bg-card">
                 {/* Gradient overlay on hover */}
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -161,7 +161,7 @@ const Projects = () => {
                       {project.aiTags.map((tag, i) => (
                         <Badge 
                           key={i} 
-                          className="text-xs bg-gradient-to-r from-purple-500/20 to-blue-500/20 border-purple-500/30 text-purple-700 dark:text-purple-300"
+                          className="text-xs bg-gradient-to-r from-purple-100 to-blue-100 border-purple-300 text-purple-800 dark:from-purple-500/20 dark:to-blue-500/20 dark:border-purple-500/30 dark:text-purple-300"
                         >
                           ✨ {tag}
                         </Badge>
