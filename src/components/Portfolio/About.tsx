@@ -1,93 +1,154 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, GraduationCap } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const About = () => {
-  return (
-    <section className="py-20 px-4 bg-background">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About <span className="text-primary">Me</span>
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Get to know more about my background, education, and what drives my passion for technology
-          </p>
-        </div>
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  return (
+    <section ref={ref} className="py-20 px-4 bg-background">
+      <div className="container mx-auto max-w-7xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="heading-secondary text-foreground mb-4">
+            About <span className="text-gradient">Me</span>
+          </h2>
+          <p className="text-muted text-lg max-w-3xl mx-auto">
+            Background, education, and technical interests
+          </p>
+        </motion.div>
+
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+        >
           {/* Profile Card */}
-          <Card className="elegant-shadow smooth-transition hover:shadow-lg border-primary/20">
-            <CardContent className="p-8 text-center">
-              <div className="mb-6">
-                <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <GraduationCap className="h-12 w-12 text-primary" />
+          <motion.div variants={cardVariants}>
+            <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <motion.div 
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+                  >
+                    <GraduationCap className="h-12 w-12 text-primary" />
+                  </motion.div>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Education</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">Education</h3>
-              </div>
-              <div className="space-y-4 text-left">
-                <div className="border-l-4 border-primary pl-4">
-                  <h4 className="font-semibold text-foreground">B.Tech in CSE (AI/ML)</h4>
-                  <p className="text-muted-foreground text-sm">Techno Main Salt Lake</p>
-                  <div className="flex items-center gap-2 mt-1">
-                    <Calendar className="h-4 w-4 text-primary" />
-                    <span className="text-sm text-muted-foreground">2022 - Present</span>
-                  </div>
-                  <Badge variant="secondary" className="mt-2">CGPA: 7.36</Badge>
+                <div className="space-y-4 text-left">
+                  <motion.div 
+                    whileHover={{ x: 5 }}
+                    className="border-l-4 border-primary pl-4"
+                  >
+                    <h4 className="font-semibold text-foreground">B.Tech in CSE (AI/ML)</h4>
+                    <p className="text-muted-foreground text-sm">Techno Main Salt Lake</p>
+                    <div className="flex items-center gap-2 mt-1">
+                      <Calendar className="h-4 w-4 text-primary" />
+                      <span className="text-sm text-muted-foreground">2022 - Present</span>
+                    </div>
+                    <Badge variant="secondary" className="mt-2">CGPA: 7.52</Badge>
+                  </motion.div>
+                  <motion.div 
+                    whileHover={{ x: 5 }}
+                    className="border-l-4 border-muted pl-4"
+                  >
+                    <h4 className="font-semibold text-foreground">Higher Secondary</h4>
+                    <p className="text-muted-foreground text-sm">B.D. College</p>
+                    <Badge variant="outline" className="mt-2">65.8%</Badge>
+                  </motion.div>
                 </div>
-                <div className="border-l-4 border-muted pl-4">
-                  <h4 className="font-semibold text-foreground">Higher Secondary</h4>
-                  <p className="text-muted-foreground text-sm">B.D. College</p>
-                  <Badge variant="outline" className="mt-2">65.8%</Badge>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </motion.div>
 
           {/* Location & Contact */}
-          <Card className="elegant-shadow smooth-transition hover:shadow-lg border-primary/20">
-            <CardContent className="p-8 text-center">
-              <div className="mb-6">
-                <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-12 w-12 text-primary" />
+          <motion.div variants={cardVariants}>
+            <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <motion.div 
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+                  >
+                    <MapPin className="h-12 w-12 text-primary" />
+                  </motion.div>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Location</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">Location</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="text-center">
-                  <p className="text-lg font-semibold text-foreground">Kolkata, West Bengal</p>
-                  <p className="text-muted-foreground">India</p>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-sm">
-                    <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground break-all">tmsl.aiml.amarpal@gmail.com</p>
+                <div className="space-y-4">
+                  <div className="text-center">
+                    <p className="text-lg font-semibold text-foreground">Kolkata, West Bengal</p>
+                    <p className="text-muted-foreground">India</p>
                   </div>
-                  <div className="text-sm">
-                    <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground">+91 9693637388</p>
+                  <div className="space-y-2">
+                    <div className="text-sm">
+                      <p className="font-medium text-foreground">Email</p>
+                      <p className="text-muted-foreground break-all">tmsl.aiml.amarpal@gmail.com</p>
+                    </div>
+                    <div className="text-sm">
+                      <p className="font-medium text-foreground">Phone</p>
+                      <p className="text-muted-foreground">+91 9693637388</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </motion.div>
 
           {/* Bio */}
-          <Card className="elegant-shadow smooth-transition hover:shadow-lg border-primary/20">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Profile</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                Aspiring Software Engineer & AI/ML Developer with strong full-stack development expertise. 
-                Skilled in React, Node.js, and Python ML projects, with experience in building scalable applications, 
-                optimizing performance, and applying data-driven solutions.
-              </p>
-              <p className="text-muted-foreground leading-relaxed text-sm mt-4">
-                Proven adaptability, leadership, and teamwork through internships and as Management Co-Head 
-                at technOTHARSH (Official Sports Society of Techno Main Salt Lake).
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+          <motion.div variants={cardVariants}>
+            <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">About</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                  <span className="text-gradient-purple font-semibold">AI & Machine Learning Engineer</span> and 
+                  <span className="text-gradient-purple font-semibold"> Full Stack Developer</span> specializing in building 
+                  intelligent data-driven applications.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                  Strong foundation in machine learning, deep learning fundamentals, and NLP. Experienced in developing 
+                  full-stack applications with React, Next.js, and Node.js, combined with backend optimization and database design.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Passionate about applying AI to real-world problems in education, mental health, and automation.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
