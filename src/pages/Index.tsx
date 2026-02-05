@@ -6,10 +6,16 @@ import Experience from "@/components/Portfolio/Experience";
 import Projects from "@/components/Portfolio/Projects";
 import Contact from "@/components/Portfolio/Contact";
 import Footer from "@/components/Portfolio/Footer";
+import { motion } from "framer-motion";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-screen"
+    >
       <Navbar />
       <main>
         <section id="home">
@@ -32,7 +38,7 @@ const Index = () => {
         </section>
       </main>
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 
