@@ -66,20 +66,21 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222.2 47.4% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222.2 47.4% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222.2 47.4% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 45 100% 65%;
+    /* Premium blue/purple gradient theme for dark mode */
+    --primary: 217 91% 65%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --primary-glow: 48 100% 75%;
-
-    --secondary: 25 100% 65%;
+    --primary-glow: 220 95% 75%;
+    
+    --secondary: 270 60% 65%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -93,12 +94,13 @@ All colors MUST be HSL.
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 45 100% 65%;
+    --ring: 217 91% 65%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(45 100% 65%), hsl(25 100% 65%));
-    --gradient-soft: linear-gradient(180deg, hsl(217.2 32.6% 17.5%), hsl(222.2 84% 4.9%));
-    --shadow-glow: 0 0 40px hsl(45 100% 65% / 0.4);
-    --shadow-elegant: 0 10px 30px -10px hsl(45 100% 65% / 0.3);
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 65%), hsl(270 60% 65%));
+    --gradient-soft: linear-gradient(180deg, hsl(222.2 47.4% 8%), hsl(222.2 47.4% 6%));
+    --shadow-glow: 0 0 40px hsl(217 91% 65% / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(217 91% 65% / 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -117,6 +119,14 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Smooth theme transitions */
+  * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
   }
 
   .hero-gradient {

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScrollspy } from "@/hooks/useScrollspy";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,8 +90,9 @@ const Navbar = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="hidden md:flex"
+            className="hidden md:flex items-center gap-2"
           >
+            <ThemeToggle />
             <a href="/Amar_Pal_resume.pdf" download="Amar_Pal_Resume.pdf">
               <Button 
                 variant="outline" 
