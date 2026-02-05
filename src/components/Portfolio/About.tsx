@@ -55,7 +55,7 @@ const About = () => {
         >
           {/* Profile Card */}
           <motion.div variants={cardVariants}>
-            <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
+            <Card className="shadow-lg hover:shadow-xl smooth-transition hover-lift border-2 h-full bg-card">
               <CardContent className="p-8 text-center">
                 <div className="mb-6">
                   <motion.div 
@@ -95,7 +95,7 @@ const About = () => {
 
           {/* Location & Contact */}
           <motion.div variants={cardVariants}>
-            <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
+            <Card className="shadow-lg hover:shadow-xl smooth-transition hover-lift border-2 h-full bg-card">
               <CardContent className="p-8 text-center">
                 <div className="mb-6">
                   <motion.div 
@@ -129,7 +129,7 @@ const About = () => {
 
           {/* Bio */}
           <motion.div variants={cardVariants}>
-            <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
+            <Card className="shadow-lg hover:shadow-xl smooth-transition hover-lift border-2 h-full bg-card">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-6 text-center">About</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm mb-4">

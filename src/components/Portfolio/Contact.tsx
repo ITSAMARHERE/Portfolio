@@ -128,7 +128,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <motion.div variants={itemVariants}>
-            <Card className="elegant-shadow border-primary/20 hover-lift">
+            <Card className="shadow-lg hover:shadow-xl border-2 hover-lift bg-card">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-foreground">
                   Send me a message

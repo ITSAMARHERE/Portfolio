@@ -137,10 +137,10 @@ const Experience = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <Card 
-                      className={`elegant-shadow smooth-transition hover-lift border-l-4 ${
+                      className={`shadow-lg hover:shadow-xl smooth-transition hover-lift border-l-4 ${
                         exp.current 
                           ? 'border-l-primary bg-primary/5 shadow-xl' 
-                          : 'border-l-muted hover:border-l-primary/50'
+                          : 'border-l-muted hover:border-l-primary/50 bg-card'
                       }`}
                     >
                       <CardHeader>
