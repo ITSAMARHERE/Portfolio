@@ -12,61 +12,61 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "SocialSphere",
-      period: "05/2025 – 07/2025",
-      description: "A modern forum platform with Supabase backend featuring authentication & real-time community features for 500+ users.",
-      technologies: ["React", "TypeScript", "Vite", "Supabase", "Tailwind"],
+      title: "Campus Care – Digital Mental Health Platform",
+      period: "08/2025 – 11/2025",
+      description: "AI-powered mental health platform for students featuring real-time emotion detection and behavioral pattern analysis to improve student wellbeing and engagement.",
+      technologies: ["Python", "AI/ML", "Data Analysis", "Real-time Processing", "React"],
       highlights: [
-        "Real-time community features",
-        "500+ active users",
-        "Modern UI/UX design",
-        "Secure authentication"
+        "Analyzed student interaction and emotion data to identify behavioral patterns",
+        "Developed real-time AI-based emotion detection pipelines",
+        "Processed and structured datasets using Python for behavioral analysis",
+        "Generated actionable insights to improve system responsiveness"
       ],
       metrics: {
-        users: "500+",
-        performance: "Real-time",
-        type: "Forum Platform"
+        users: "Students",
+        performance: "Real-time AI",
+        type: "Mental Health"
       },
-      githubUrl: "https://github.com/ITSAMARHERE/SocialSphere",
-      demoUrl: "https://social-sphere-smoky.vercel.app/"
+      githubUrl: "https://github.com/ITSAMARHERE/Campus-Care",
+      demoUrl: "#"
     },
     {
-      title: "Talka - Chat App",
-      period: "01/2025 – 03/2025",
-      description: "A secure chat application with real-time messaging & authentication, scaled to handle 200+ concurrent users across devices.",
-      technologies: ["React", "Redux", "Node.js", "Express.js", "MongoDB", "Socket.io"],
-      highlights: [
-        "Real-time messaging",
-        "200+ concurrent users",
-        "Cross-device compatibility",
-        "Secure authentication"
-      ],
-      metrics: {
-        users: "200+",
-        performance: "Real-time",
-        type: "Chat Application"
-      },
-      githubUrl: "https://github.com/ITSAMARHERE/Talka",
-      demoUrl: "https://talka.onrender.com/login"
-    },
-    {
-      title: "ECommerce App with Admin Panel",
+      title: "ECommerce Platform with Admin Panel",
       period: "04/2025 – 06/2025",
-      description: "A full-featured e-commerce platform with cart & admin panel, achieving 30% faster load times through optimized database queries.",
-      technologies: ["React", "Redux Toolkit", "Tailwind", "MongoDB"],
+      description: "Full-stack e-commerce solution with comprehensive admin dashboard, achieving 30% performance improvement through optimized database architecture and query optimization.",
+      technologies: ["React", "Redux Toolkit", "Node.js", "MongoDB", "Tailwind CSS"],
       highlights: [
-        "Complete admin panel",
-        "Shopping cart functionality",
-        "30% faster load times",
-        "Optimized database queries"
+        "Developed full-stack platform with React and Node.js",
+        "Optimized database queries achieving ~30% improvement in response time",
+        "Implemented role-based access control for admin operations",
+        "Designed scalable architecture for high-traffic scenarios"
       ],
       metrics: {
         performance: "30% faster",
-        improvement: "Load time",
+        improvement: "Response Time",
         type: "E-commerce"
       },
       githubUrl: "https://github.com/ITSAMARHERE/ECommerce-",
       demoUrl: "https://ecommerce-1-sur7.onrender.com/auth/login"
+    },
+    {
+      title: "Talka - Real-Time Chat Application",
+      period: "01/2025 – 03/2025",
+      description: "Scalable real-time messaging platform with intelligent data architecture designed to handle concurrent users efficiently with optimized message storage and retrieval.",
+      technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Data Architecture"],
+      highlights: [
+        "Analyzed chat usage patterns and user activity data",
+        "Designed optimized database schemas for message storage and retrieval",
+        "Implemented scalability features for concurrent user handling",
+        "Built real-time communication infrastructure"
+      ],
+      metrics: {
+        users: "Concurrent",
+        performance: "Real-time",
+        type: "Chat Platform"
+      },
+      githubUrl: "https://github.com/ITSAMARHERE/Talka",
+      demoUrl: "https://talka.onrender.com/login"
     }
   ];
 
@@ -102,10 +102,10 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            What have I <span className="gradient-text">created?</span>
+            Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Explore some of the projects I've built, showcasing my technical skills and problem-solving abilities.
+            AI-powered and data-driven applications showcasing technical depth and real-world impact
           </p>
         </motion.div>
 

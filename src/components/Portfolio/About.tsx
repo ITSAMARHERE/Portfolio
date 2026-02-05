@@ -79,7 +79,7 @@ const About = () => {
                       <Calendar className="h-4 w-4 text-primary" />
                       <span className="text-sm text-muted-foreground">2022 - Present</span>
                     </div>
-                    <Badge variant="secondary" className="mt-2">CGPA: 7.36</Badge>
+                    <Badge variant="secondary" className="mt-2">CGPA: 7.52</Badge>
                   </motion.div>
                   <motion.div 
                     whileHover={{ x: 5 }}
@@ -134,13 +134,14 @@ const About = () => {
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Profile</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  Aspiring Software Engineer & AI/ML Developer with strong full-stack development expertise. 
-                  Skilled in React, Node.js, and Python ML projects, with experience in building scalable applications, 
-                  optimizing performance, and applying data-driven solutions.
+                  AI & Machine Learning–focused Computer Science undergraduate with hands-on experience in building 
+                  AI-powered, data-driven applications. Strong foundation in Machine Learning, Deep Learning fundamentals, 
+                  NLP pipelines, and AI-integrated full-stack systems.
                 </p>
                 <p className="text-muted-foreground leading-relaxed text-sm mt-4">
-                  Proven adaptability, leadership, and teamwork through internships and as Management Co-Head 
-                  at technOTHARSH (Official Sports Society of Techno Main Salt Lake).
+                  Experienced in designing end-to-end AI solutions — from data preprocessing and model integration to 
+                  scalable backend deployment. Passionate about applying AI to real-world problems in mental health, 
+                  education, and automation.
                 </p>
               </CardContent>
             </Card>

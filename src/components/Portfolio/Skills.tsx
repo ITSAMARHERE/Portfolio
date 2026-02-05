@@ -10,39 +10,45 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Programming Languages",
-      icon: Code,
-      skills: ["C", "Java", "JavaScript", "Python"],
-      color: "bg-blue-500/10 text-blue-600"
-    },
-    {
-      title: "Frameworks & Tools",
-      icon: Wrench,
-      skills: ["React", "React Native", "Next.js", "Node.js", "Express.js", "Spring", "Git", "GitHub", "Tailwind CSS", "Postman", "Socket.io", "NextAuth", "Clerk", "Firebase", "JWT", "Bcrypt", "Shadcn"],
-      color: "bg-green-500/10 text-green-600"
-    },
-    {
-      title: "Databases/Cloud",
-      icon: Database,
-      skills: ["MySQL", "PostgreSQL", "MongoDB", "Supabase"],
+      title: "AI & Machine Learning",
+      icon: Brain,
+      skills: ["Python", "NumPy", "Pandas", "TensorFlow", "NLP Pipelines", "Deep Learning"],
       color: "bg-purple-500/10 text-purple-600"
     },
     {
-      title: "Machine Learning",
-      icon: Brain,
-      skills: ["Python (ML Projects)", "CNN", "Pandas", "NumPy", "TensorFlow"],
+      title: "Programming Languages",
+      icon: Code,
+      skills: ["C", "Java", "JavaScript", "Node.js"],
+      color: "bg-blue-500/10 text-blue-600"
+    },
+    {
+      title: "Web Development",
+      icon: Wrench,
+      skills: ["React", "Next.js", "Tailwind CSS", "Shadcn", "HTMX", "Redux Toolkit"],
+      color: "bg-green-500/10 text-green-600"
+    },
+    {
+      title: "Databases & Cloud",
+      icon: Database,
+      skills: ["MySQL", "PostgreSQL", "MongoDB", "Supabase"],
       color: "bg-orange-500/10 text-orange-600"
     },
     {
-      title: "Core CS Subjects",
+      title: "Developer Tools",
+      icon: Wrench,
+      skills: ["Git", "GitHub", "Postman", "VSCode", "Clerk", "NextAuth"],
+      color: "bg-cyan-500/10 text-cyan-600"
+    },
+    {
+      title: "Core Computer Science",
       icon: Award,
-      skills: ["OOPS", "DSA", "OS", "DBMS", "Computer Networks"],
+      skills: ["OOP", "Data Structures", "Algorithms", "Operating Systems", "DBMS", "Computer Networks"],
       color: "bg-red-500/10 text-red-600"
     },
     {
-      title: "Soft Skills",
+      title: "Professional Skills",
       icon: Users,
-      skills: ["Problem Solving", "Critical Thinking", "Leadership", "Teamwork", "Communication"],
+      skills: ["Problem Solving", "Critical Thinking", "Leadership", "Team Collaboration", "Communication"],
       color: "bg-indigo-500/10 text-indigo-600"
     }
   ];
@@ -80,10 +86,10 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            My <span className="gradient-text">Skills</span>
+            Technical <span className="gradient-text">Expertise</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Technologies and skills I've mastered throughout my journey as a developer
+            Comprehensive skill set spanning AI/ML development, full-stack engineering, and data-driven solutions
           </p>
         </motion.div>
 

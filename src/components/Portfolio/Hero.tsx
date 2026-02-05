@@ -91,10 +91,10 @@ const Hero = () => {
                 className="flex flex-wrap gap-2 justify-center lg:justify-start mt-4"
               >
                 <Badge variant="secondary" className="text-sm px-4 py-2 glass animate-float">
-                  Software Engineer
+                  AI/ML Engineer
                 </Badge>
                 <Badge variant="secondary" className="text-sm px-4 py-2 glass animate-float" style={{ animationDelay: '0.5s' }}>
-                  AI/ML Developer
+                  Data-Driven Developer
                 </Badge>
               </motion.div>
             </motion.div>
@@ -103,19 +103,20 @@ const Hero = () => {
               <motion.h2 
                 className="text-2xl md:text-3xl font-semibold text-white"
               >
-                I love being a <span className="text-white/90 relative">
-                  developer
+                Building <span className="text-white/90 relative">
+                  AI-Powered Solutions
                   <motion.span
                     className="absolute bottom-0 left-0 w-full h-1 bg-primary/50"
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 1, delay: 1 }}
                   />
-                </span>!
+                </span>
               </motion.h2>
               <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
-                Aspiring Software Engineer & AI/ML Developer with strong full-stack development expertise. 
-                Skilled in React, Node.js, and Python ML projects, with experience in building scalable applications.
+                AI & Machine Learning–focused Computer Science undergraduate specializing in building intelligent, 
+                data-driven applications. Experienced in designing end-to-end AI solutions — from data preprocessing 
+                and model integration to scalable backend deployment.
               </p>
             </motion.div>
 

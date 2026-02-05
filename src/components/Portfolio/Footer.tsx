@@ -50,8 +50,8 @@ const Footer = () => {
               Amar<span className="text-primary">Pal</span>
             </div>
             <p className="text-background/80 leading-relaxed">
-              Aspiring Software Engineer & AI/ML Developer passionate about building 
-              innovative solutions and creating impactful technology.
+              AI & Machine Learning–focused Computer Science undergraduate passionate about building 
+              intelligent, data-driven solutions and creating impactful technology.
             </p>
           </motion.div>
 
@@ -65,6 +65,7 @@ const Footer = () => {
                 { label: "Skills", href: "#skills" },
                 { label: "Experience", href: "#experience" },
                 { label: "Projects", href: "#projects" },
+                { label: "Certifications", href: "#certifications" },
                 { label: "Contact", href: "#contact" },
               ].map((item) => (
                 <motion.a

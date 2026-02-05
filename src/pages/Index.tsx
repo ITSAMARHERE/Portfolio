@@ -4,6 +4,7 @@ import About from "@/components/Portfolio/About";
 import Skills from "@/components/Portfolio/Skills";
 import Experience from "@/components/Portfolio/Experience";
 import Projects from "@/components/Portfolio/Projects";
+import Certifications from "@/components/Portfolio/Certifications";
 import Contact from "@/components/Portfolio/Contact";
 import Footer from "@/components/Portfolio/Footer";
 import { motion } from "framer-motion";
@@ -32,6 +33,9 @@ const Index = () => {
         </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="certifications">
+          <Certifications />
         </section>
         <section id="contact">
           <Contact />

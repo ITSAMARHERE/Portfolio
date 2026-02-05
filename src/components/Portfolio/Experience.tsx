@@ -12,29 +12,17 @@ const Experience = () => {
     {
       title: "Software Development Intern",
       company: "Intelligent Creation",
-      location: "Pune",
-      period: "08/2025 – Present",
+      location: "Pune, India",
+      period: "08/2025 – 01/2026",
       type: "Internship",
       responsibilities: [
-        "Built a block-based interface using JavaScript improving user interactivity",
-        "Applied OOP principles to enhance modularity and maintainability of software",
-        "Optimized system performance, reducing load time by 20% for 1,000+ users"
+        "Analyzed and structured application data using relational database models to optimize data flow",
+        "Designed and implemented optimized SQL queries improving data retrieval efficiency by 25%",
+        "Developed backend APIs to collect, process, and validate data for business logic implementation",
+        "Collaborated with cross-functional teams to ensure data accuracy and consistency across systems",
+        "Prepared and structured datasets for analytics and reporting, enabling data-driven decision-making"
       ],
-      skills: ["JavaScript", "OOP", "Performance Optimization"],
-      current: true
-    },
-    {
-      title: "Data Analytics Intern",
-      company: "Deloitte",
-      location: "Australia (Virtual)",
-      period: "07/2025",
-      type: "Virtual Internship",
-      responsibilities: [
-        "Completed Deloitte's job simulation on data analysis & forensic technology",
-        "Designed an interactive data dashboard in Tableau for business insights",
-        "Used Excel to classify large datasets and draw actionable conclusions"
-      ],
-      skills: ["Tableau", "Excel", "Data Analysis", "Business Intelligence"],
+      skills: ["SQL", "Database Design", "Backend APIs", "Data Analysis", "Python"],
       current: false
     }
   ];
@@ -77,10 +65,10 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            My <span className="gradient-text">Experience</span>
+            Professional <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Professional journey and internships that shaped my development skills
+            Building expertise in data-driven development and backend system architecture
           </p>
         </motion.div>
 
