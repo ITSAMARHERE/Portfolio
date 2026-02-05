@@ -51,7 +51,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center px-4 py-20 hero-gradient overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -64,7 +64,7 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-20 right-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-96 h-96 bg-blue-400/10 dark:bg-blue-500/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -76,7 +76,7 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-96 h-96 bg-purple-400/10 dark:bg-purple-500/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -92,13 +92,13 @@ const Hero = () => {
             <motion.div variants={itemVariants} className="space-y-2">
               <motion.p 
                 variants={itemVariants}
-                className="text-white/90 text-lg font-medium tracking-wide"
+                className="text-foreground/70 text-lg font-medium tracking-wide"
               >
                 Hi, I'm
               </motion.p>
               <motion.h1 
                 variants={itemVariants}
-                className="heading-primary text-white mb-6"
+                className="heading-primary text-foreground mb-6"
               >
                 Amar <span className="text-gradient">Pal</span>
               </motion.h1>
@@ -122,9 +122,9 @@ const Hero = () => {
 
             <motion.div variants={itemVariants} className="space-y-6">
               <motion.p 
-                className="text-white/85 text-lg md:text-xl leading-relaxed max-w-2xl"
+                className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl"
               >
-                Building intelligent systems with <span className="text-white font-semibold">AI/ML</span> and scalable 
+                Building intelligent systems with <span className="text-primary font-semibold">AI/ML</span> and scalable 
                 web applications. Focused on delivering data-driven solutions from model development to production deployment.
               </motion.p>
             </motion.div>
@@ -136,8 +136,8 @@ const Hero = () => {
               <a href="mailto:tmsl.aiml.amarpal@gmail.com">
                 <Button 
                   size="lg" 
-                  variant="secondary"
-                  className="glow-effect smooth-transition hover:scale-105 hover-lift group"
+                  variant="default"
+                  className="shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 smooth-transition hover:scale-105 group"
                 >
                   <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
                   Get in Touch
@@ -147,7 +147,7 @@ const Hero = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-white/30 text-white hover:bg-white/10 smooth-transition hover:scale-105 group"
+                  className="border-2 hover:bg-primary/5 smooth-transition hover:scale-105 group"
                 >
                   View Projects
                   <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
@@ -177,7 +177,7 @@ const Hero = () => {
                   <Button 
                     size="icon" 
                     variant="ghost" 
-                    className="text-white/80 hover:text-white hover:bg-white/10 smooth-transition"
+                    className="hover:bg-primary/10 hover:text-primary smooth-transition border border-border"
                   >
                     <social.icon className="h-5 w-5" />
                   </Button>
@@ -203,7 +203,7 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute inset-0 bg-white/20 rounded-2xl z-0 blur-sm"
+                className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl z-0 blur-sm"
               />
               
               <motion.img 
@@ -253,7 +253,7 @@ const Hero = () => {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="text-white/60 flex flex-col items-center gap-2"
+            className="text-muted-foreground flex flex-col items-center gap-2"
           >
             <span className="text-sm">Scroll to explore</span>
             <ArrowDown className="h-5 w-5" />

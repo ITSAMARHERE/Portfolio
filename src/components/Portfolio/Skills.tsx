@@ -13,31 +13,31 @@ const Skills = () => {
       title: "AI & Machine Learning",
       icon: Brain,
       skills: ["Python", "TensorFlow", "NLP", "Deep Learning", "NumPy", "Pandas"],
-      color: "bg-purple-500/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400"
+      color: "bg-purple-100 text-purple-700 dark:bg-purple-500/20 dark:text-purple-300"
     },
     {
       title: "Frontend Development",
       icon: Code,
       skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux Toolkit"],
-      color: "bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400"
+      color: "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300"
     },
     {
       title: "Backend Development",
       icon: Database,
       skills: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "MySQL", "REST APIs"],
-      color: "bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400"
+      color: "bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-300"
     },
     {
       title: "Tools & Platforms",
       icon: Wrench,
       skills: ["Git", "GitHub", "Postman", "Vercel", "Supabase"],
-      color: "bg-orange-500/10 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400"
+      color: "bg-orange-100 text-orange-700 dark:bg-orange-500/20 dark:text-orange-300"
     },
     {
       title: "Core Computer Science",
       icon: Award,
       skills: ["Data Structures", "Algorithms", "Operating Systems", "DBMS", "Computer Networks", "OOP"],
-      color: "bg-red-500/10 text-red-600 dark:bg-red-500/20 dark:text-red-400"
+      color: "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300"
     }
   ];
 
