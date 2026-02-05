@@ -12,44 +12,38 @@ const Skills = () => {
     {
       title: "AI & Machine Learning",
       icon: Brain,
-      skills: ["Python", "NumPy", "Pandas", "TensorFlow", "NLP Pipelines", "Deep Learning"],
-      color: "bg-purple-500/10 text-purple-600"
+      skills: ["Python", "TensorFlow", "PyTorch", "NLP", "CNN", "Transformers", "LLM APIs", "NumPy", "Pandas"],
+      color: "bg-purple-500/10 text-purple-600 dark:bg-purple-500/20 dark:text-purple-400"
     },
     {
-      title: "Programming Languages",
+      title: "Frontend Development",
       icon: Code,
-      skills: ["C", "Java", "JavaScript", "Node.js"],
-      color: "bg-blue-500/10 text-blue-600"
+      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Framer Motion"],
+      color: "bg-blue-500/10 text-blue-600 dark:bg-blue-500/20 dark:text-blue-400"
     },
     {
-      title: "Web Development",
-      icon: Wrench,
-      skills: ["React", "Next.js", "Tailwind CSS", "Shadcn", "HTMX", "Redux Toolkit"],
-      color: "bg-green-500/10 text-green-600"
-    },
-    {
-      title: "Databases & Cloud",
+      title: "Backend Development",
       icon: Database,
-      skills: ["MySQL", "PostgreSQL", "MongoDB", "Supabase"],
-      color: "bg-orange-500/10 text-orange-600"
+      skills: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "MySQL", "REST APIs", "GraphQL"],
+      color: "bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400"
     },
     {
-      title: "Developer Tools",
+      title: "DevOps & Tools",
       icon: Wrench,
-      skills: ["Git", "GitHub", "Postman", "VSCode", "Clerk", "NextAuth"],
-      color: "bg-cyan-500/10 text-cyan-600"
+      skills: ["Git", "GitHub", "Docker", "CI/CD", "Vercel", "Supabase", "Postman"],
+      color: "bg-orange-500/10 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400"
     },
     {
       title: "Core Computer Science",
       icon: Award,
-      skills: ["OOP", "Data Structures", "Algorithms", "Operating Systems", "DBMS", "Computer Networks"],
-      color: "bg-red-500/10 text-red-600"
+      skills: ["Data Structures", "Algorithms", "Operating Systems", "DBMS", "Computer Networks", "OOP"],
+      color: "bg-red-500/10 text-red-600 dark:bg-red-500/20 dark:text-red-400"
     },
     {
       title: "Professional Skills",
       icon: Users,
-      skills: ["Problem Solving", "Critical Thinking", "Leadership", "Team Collaboration", "Communication"],
-      color: "bg-indigo-500/10 text-indigo-600"
+      skills: ["System Design", "Clean Architecture", "Problem Solving", "Team Leadership", "Communication"],
+      color: "bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-400"
     }
   ];
 
@@ -86,10 +80,10 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Technical <span className="gradient-text">Expertise</span>
+            Technical <span className="gradient-text">Stack</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Comprehensive skill set spanning AI/ML development, full-stack engineering, and data-driven solutions
+            Comprehensive expertise in AI/ML development, full-stack engineering, and scalable system architecture
           </p>
         </motion.div>
 

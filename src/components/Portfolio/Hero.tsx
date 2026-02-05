@@ -1,10 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, Phone, ArrowDown } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import profile2 from "@/assets/profile-2.jpg";
 
 const Hero = () => {
+  const roles = [
+    "AI & Machine Learning Engineer",
+    "Full Stack Developer", 
+    "Software Engineer"
+  ];
+  
+  const [currentRole, setCurrentRole] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentRole((prev) => (prev + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -78,46 +94,39 @@ const Hero = () => {
                 variants={itemVariants}
                 className="text-white/90 text-lg font-medium tracking-wide"
               >
-                Hi There, I'm
+                Hi, I'm
               </motion.p>
               <motion.h1 
                 variants={itemVariants}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
               >
                 Amar <span className="gradient-text">Pal</span>
               </motion.h1>
-              <motion.div 
-                variants={itemVariants}
-                className="flex flex-wrap gap-2 justify-center lg:justify-start mt-4"
-              >
-                <Badge variant="secondary" className="text-sm px-4 py-2 glass animate-float">
-                  AI/ML Engineer
-                </Badge>
-                <Badge variant="secondary" className="text-sm px-4 py-2 glass animate-float" style={{ animationDelay: '0.5s' }}>
-                  Data-Driven Developer
-                </Badge>
-              </motion.div>
+              
+              {/* Animated Role Switcher */}
+              <div className="h-16 flex items-center">
+                <AnimatePresence mode="wait">
+                  <motion.h2
+                    key={currentRole}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent"
+                  >
+                    {roles[currentRole]}
+                  </motion.h2>
+                </AnimatePresence>
+              </div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
-              <motion.h2 
-                className="text-2xl md:text-3xl font-semibold text-white"
+              <motion.p 
+                className="text-white/80 text-lg md:text-xl leading-relaxed max-w-2xl"
               >
-                Building <span className="text-white/90 relative">
-                  AI-Powered Solutions
-                  <motion.span
-                    className="absolute bottom-0 left-0 w-full h-1 bg-primary/50"
-                    initial={{ width: 0 }}
-                    animate={{ width: "100%" }}
-                    transition={{ duration: 1, delay: 1 }}
-                  />
-                </span>
-              </motion.h2>
-              <p className="text-white/80 text-lg leading-relaxed max-w-2xl">
-                AI & Machine Learning–focused Computer Science undergraduate specializing in building intelligent, 
-                data-driven applications. Experienced in designing end-to-end AI solutions — from data preprocessing 
-                and model integration to scalable backend deployment.
-              </p>
+                Building production-ready AI systems, scalable web applications, and data-driven solutions. 
+                Specializing in end-to-end development from model training to cloud deployment.
+              </motion.p>
             </motion.div>
 
             <motion.div 

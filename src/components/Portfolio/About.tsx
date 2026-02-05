@@ -132,16 +132,20 @@ const About = () => {
           <motion.div variants={cardVariants}>
             <Card className="elegant-shadow smooth-transition hover-lift border-primary/20 h-full">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Profile</h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  AI & Machine Learning–focused Computer Science undergraduate with hands-on experience in building 
-                  AI-powered, data-driven applications. Strong foundation in Machine Learning, Deep Learning fundamentals, 
-                  NLP pipelines, and AI-integrated full-stack systems.
+                <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Professional Profile</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                  AI & Machine Learning Engineer with expertise in building production-ready intelligent systems. 
+                  Specialized in developing end-to-end AI solutions — from data preprocessing and model training 
+                  to API integration and cloud deployment.
                 </p>
-                <p className="text-muted-foreground leading-relaxed text-sm mt-4">
-                  Experienced in designing end-to-end AI solutions — from data preprocessing and model integration to 
-                  scalable backend deployment. Passionate about applying AI to real-world problems in mental health, 
-                  education, and automation.
+                <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                  Strong foundation in deep learning, NLP pipelines, and LLM integration. Experienced in building 
+                  scalable full-stack applications with modern frameworks (React, Next.js, Node.js) and architecting 
+                  robust backend systems with optimized database design.
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Passionate about applying AI to solve real-world problems in education, mental health, and automation. 
+                  Proven ability to deliver data-driven solutions with measurable business impact.
                 </p>
               </CardContent>
             </Card>
