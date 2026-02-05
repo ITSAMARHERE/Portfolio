@@ -4,6 +4,7 @@ import { Menu, X, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScrollspy } from "@/hooks/useScrollspy";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import Amar_Pal_Resume from "@/assets/Amar_Pal_Resume.pdf";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,7 +95,7 @@ const Navbar = () => {
             className="hidden md:flex items-center gap-2"
           >
             <ThemeToggle />
-            <a href="/Amar_Pal_resume.pdf" download="Amar_Pal_Resume.pdf">
+            <a href={Amar_Pal_Resume} download="Amar_Pal_Resume.pdf">
               <Button 
                 variant="outline" 
                 size="sm" 

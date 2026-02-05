@@ -1,8 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, GraduationCap } from "lucide-react";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const About = () => {
@@ -26,7 +25,7 @@ const About = () => {
       y: 0,
       transition: { 
         duration: 0.6,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };

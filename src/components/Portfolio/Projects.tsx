@@ -28,8 +28,9 @@ const Projects = () => {
         type: "Mental Health AI"
       },
       aiTags: ["NLP", "Data Analysis", "Real-time Processing"],
-      githubUrl: "https://github.com/ITSAMARHERE/Campus-Care",
-      demoUrl: "#"
+      githubUrl: "https://github.com/ANISHAGRWAL/SIH_25",
+
+      demoUrl: "https://campuscare.live/"
     },
     {
       title: "ECommerce Platform with Admin Panel",
@@ -89,8 +90,7 @@ const Projects = () => {
       opacity: 1, 
       y: 0,
       transition: { 
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.5
       }
     }
   };
