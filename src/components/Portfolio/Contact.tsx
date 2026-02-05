@@ -4,11 +4,78 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import emailjs from "@emailjs/browser";
+import { useToast } from "@/hooks/use-toast";
+
+// Form validation schema
+const contactFormSchema = z.object({
+  firstName: z.string().min(2, "First name must be at least 2 characters"),
+  lastName: z.string().min(2, "Last name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  subject: z.string().min(5, "Subject must be at least 5 characters"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      // EmailJS configuration
+      // Replace these with your actual EmailJS credentials
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID";
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
+
+      // Prepare the email parameters
+      const templateParams = {
+        from_name: `${data.firstName} ${data.lastName}`,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message,
+        to_email: "tmsl.aiml.amarpal@gmail.com",
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+        variant: "default",
+      });
+
+      reset();
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -135,25 +202,35 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
                         First Name
                       </label>
                       <Input 
+                        {...register("firstName")}
                         placeholder="John" 
-                        className="border-primary/20 focus:border-primary smooth-transition" 
+                        className="border-primary/20 focus:border-primary smooth-transition"
+                        disabled={isSubmitting}
                       />
+                      {errors.firstName && (
+                        <p className="text-sm text-destructive mt-1">{errors.firstName.message}</p>
+                      )}
                     </div>
                     <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
                         Last Name
                       </label>
                       <Input 
+                        {...register("lastName")}
                         placeholder="Doe" 
-                        className="border-primary/20 focus:border-primary smooth-transition" 
+                        className="border-primary/20 focus:border-primary smooth-transition"
+                        disabled={isSubmitting}
                       />
+                      {errors.lastName && (
+                        <p className="text-sm text-destructive mt-1">{errors.lastName.message}</p>
+                      )}
                     </div>
                   </div>
 
@@ -162,10 +239,15 @@ const Contact = () => {
                       Email
                     </label>
                     <Input 
+                      {...register("email")}
                       type="email" 
                       placeholder="john@example.com" 
-                      className="border-primary/20 focus:border-primary smooth-transition" 
+                      className="border-primary/20 focus:border-primary smooth-transition"
+                      disabled={isSubmitting}
                     />
+                    {errors.email && (
+                      <p className="text-sm text-destructive mt-1">{errors.email.message}</p>
+                    )}
                   </div>
 
                   <div>
@@ -173,9 +255,14 @@ const Contact = () => {
                       Subject
                     </label>
                     <Input 
+                      {...register("subject")}
                       placeholder="Project Discussion" 
-                      className="border-primary/20 focus:border-primary smooth-transition" 
+                      className="border-primary/20 focus:border-primary smooth-transition"
+                      disabled={isSubmitting}
                     />
+                    {errors.subject && (
+                      <p className="text-sm text-destructive mt-1">{errors.subject.message}</p>
+                    )}
                   </div>
 
                   <div>
@@ -183,10 +270,15 @@ const Contact = () => {
                       Message
                     </label>
                     <Textarea 
+                      {...register("message")}
                       placeholder="Tell me about your project..."
                       rows={5}
                       className="border-primary/20 focus:border-primary resize-none smooth-transition"
+                      disabled={isSubmitting}
                     />
+                    {errors.message && (
+                      <p className="text-sm text-destructive mt-1">{errors.message.message}</p>
+                    )}
                   </div>
 
                   <motion.div
@@ -196,9 +288,10 @@ const Contact = () => {
                     <Button 
                       type="submit" 
                       className="w-full glow-effect smooth-transition group"
+                      disabled={isSubmitting}
                     >
                       <Send className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </motion.div>
                 </form>
