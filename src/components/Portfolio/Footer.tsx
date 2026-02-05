@@ -64,7 +64,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-background/60 text-sm text-center md:text-left">
-            © 2025 Amar Pal. All rights reserved.
+            © 2025 Amar Pall. All rights reserved.
           </p>
           <p className="text-background/60 text-sm flex items-center gap-1">
             Built with <Heart className="h-4 w-4 text-primary" /> using React & Tailwind CSS
