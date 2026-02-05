@@ -35,7 +35,7 @@ const Hero = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
-      opacity: 1, 
+      opacity: 50, 
       y: 0,
       transition: { duration: 0.5 }
     }
@@ -46,7 +46,7 @@ const Hero = () => {
     visible: { 
       opacity: 1, 
       scale: 1,
-      transition: { duration: 0.8, ease: "easeOut" }
+      transition: { duration: 0.8 }
     }
   };
 

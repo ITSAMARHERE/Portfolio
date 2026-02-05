@@ -125,21 +125,9 @@ const Footer = () => {
           className="border-t border-background/20 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-background/60 text-sm text-center md:text-left">
-            © 2025 Amar Pall. All rights reserved.
+            © 2025 Amar Pal. All rights reserved.
           </p>
-          <motion.p 
-            className="text-background/60 text-sm flex items-center gap-1"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            Built with <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
-            >
-              <Heart className="h-4 w-4 text-primary inline" />
-            </motion.span> using React & Tailwind CSS
-          </motion.p>
+          
         </motion.div>
       </div>
 
