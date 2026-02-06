@@ -41,21 +41,21 @@ const Navbar = () => {
           : 'bg-background/80 backdrop-blur-sm'
       }`}
     >
-      <div className="container mx-auto max-w-7xl px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-2xl font-bold"
+            className="text-xl sm:text-2xl font-bold"
           >
             <span className="text-primary">Amar</span>
             <span className="text-foreground">Pal</span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navItems.map((item, index) => {
               const isActive = activeSection === item.href.substring(1);
               return (
@@ -67,7 +67,7 @@ const Navbar = () => {
                 >
                   <a
                     href={item.href}
-                    className={`relative px-4 py-2 font-medium smooth-transition ${
+                    className={`relative px-2 lg:px-4 py-2 font-medium smooth-transition text-sm lg:text-base ${
                       isActive 
                         ? 'text-primary' 
                         : 'text-muted-foreground hover:text-primary'
@@ -108,7 +108,8 @@ const Navbar = () => {
           </motion.div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
