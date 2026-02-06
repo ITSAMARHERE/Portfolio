@@ -114,8 +114,8 @@ const Contact = () => {
     <section ref={ref} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-0 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-0 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-secondary/20 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
