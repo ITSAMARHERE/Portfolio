@@ -51,7 +51,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -64,7 +64,7 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-20 right-20 w-96 h-96 bg-blue-400/10 dark:bg-blue-500/10 rounded-full blur-3xl"
+          className="absolute top-10 sm:top-20 right-10 sm:right-20 w-48 h-48 sm:w-64 md:w-96 sm:h-64 md:h-96 bg-blue-400/10 dark:bg-blue-500/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -76,35 +76,35 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-20 left-20 w-96 h-96 bg-purple-400/10 dark:bg-purple-500/10 rounded-full blur-3xl"
+          className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-48 h-48 sm:w-64 md:w-96 sm:h-64 md:h-96 bg-purple-400/10 dark:bg-purple-500/10 rounded-full blur-3xl"
         />
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Text Content */}
           <motion.div 
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="text-center lg:text-left space-y-8"
+            className="text-center lg:text-left space-y-6 sm:space-y-8"
           >
             <motion.div variants={itemVariants} className="space-y-2">
               <motion.p 
                 variants={itemVariants}
-                className="text-foreground/70 text-lg font-medium tracking-wide"
+                className="text-foreground/70 text-base sm:text-lg font-medium tracking-wide"
               >
                 Hi, I'm
               </motion.p>
               <motion.h1 
                 variants={itemVariants}
-                className="heading-primary text-foreground mb-6"
+                className="heading-primary text-foreground mb-4 sm:mb-6"
               >
                 Amar <span className="text-gradient">Pal</span>
               </motion.h1>
               
               {/* Animated Role Switcher with Gradient */}
-              <div className="h-16 flex items-center">
+              <div className="h-12 sm:h-14 md:h-16 flex items-center justify-center lg:justify-start">
                 <AnimatePresence mode="wait">
                   <motion.h2
                     key={currentRole}
@@ -112,7 +112,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-gradient-purple"
+                    className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gradient-purple"
                   >
                     {roles[currentRole]}
                   </motion.h2>
@@ -120,9 +120,9 @@ const Hero = () => {
               </div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="space-y-6">
+            <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6">
               <motion.p 
-                className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl"
+                className="text-muted-foreground text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0"
               >
                 Building intelligent systems with <span className="text-primary font-semibold">AI/ML</span> and scalable 
                 web applications. Focused on delivering data-driven solutions from model development to production deployment.
@@ -131,15 +131,15 @@ const Hero = () => {
 
             <motion.div 
               variants={itemVariants}
-              className="flex flex-wrap gap-4 justify-center lg:justify-start"
+              className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start"
             >
               <a href="mailto:tmsl.aiml.amarpal@gmail.com">
                 <Button 
                   size="lg" 
                   variant="default"
-                  className="shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 smooth-transition hover:scale-105 group"
+                  className="shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 smooth-transition hover:scale-105 group text-sm sm:text-base"
                 >
-                  <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+                  <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:rotate-12 transition-transform" />
                   Get in Touch
                 </Button>
               </a>
@@ -147,17 +147,17 @@ const Hero = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-2 hover:bg-primary/5 smooth-transition hover:scale-105 group"
+                  className="border-2 hover:bg-primary/5 smooth-transition hover:scale-105 group text-sm sm:text-base"
                 >
                   View Projects
-                  <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+                  <ArrowDown className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-y-1 transition-transform" />
                 </Button>
               </a>
             </motion.div>
 
             <motion.div 
               variants={itemVariants}
-              className="flex gap-4 justify-center lg:justify-start"
+              className="flex gap-3 sm:gap-4 justify-center lg:justify-start"
             >
               {[
                 { icon: Github, href: "https://github.com/ITSAMARHERE" },
@@ -177,9 +177,9 @@ const Hero = () => {
                   <Button 
                     size="icon" 
                     variant="ghost" 
-                    className="hover:bg-primary/10 hover:text-primary smooth-transition border border-border"
+                    className="hover:bg-primary/10 hover:text-primary smooth-transition border border-border h-9 w-9 sm:h-10 sm:w-10"
                   >
-                    <social.icon className="h-5 w-5" />
+                    <social.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                   </Button>
                 </motion.a>
               ))}
@@ -191,9 +191,9 @@ const Hero = () => {
             variants={imageVariants}
             initial="hidden"
             animate="visible"
-            className="relative flex justify-center lg:justify-end"
+            className="relative flex justify-center lg:justify-end mt-8 lg:mt-0"
           >
-            <div className="relative group w-full md:w-3/4 lg:w-full max-w-sm sm:max-w-md">
+            <div className="relative group w-full sm:w-3/4 lg:w-full max-w-xs sm:max-w-md">
               <motion.div 
                 animate={{ 
                   rotate: [3, 6, 3],
@@ -225,7 +225,7 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="absolute -top-4 -right-4 w-24 h-24 bg-primary/30 rounded-full blur-2xl"
+                className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-primary/30 rounded-full blur-2xl"
               />
               <motion.div
                 animate={{
@@ -237,7 +237,7 @@ const Hero = () => {
                   ease: "easeInOut",
                   delay: 0.5
                 }}
-                className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary/30 rounded-full blur-2xl"
+                className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-16 h-16 sm:w-24 sm:h-24 bg-secondary/30 rounded-full blur-2xl"
               />
             </div>
           </motion.div>
@@ -248,7 +248,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:block"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}

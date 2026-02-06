@@ -62,7 +62,7 @@ responsibilities: [
   };
 
   return (
-    <section ref={ref} className="py-20 px-4 bg-background relative overflow-hidden">
+    <section ref={ref} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
@@ -74,9 +74,9 @@ responsibilities: [
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="heading-secondary text-foreground mb-4">
+          <h2 className="heading-secondary text-foreground mb-3 sm:mb-4">
             Professional <span className="text-gradient">Experience</span>
           </h2>
           <p className="text-muted text-lg max-w-3xl mx-auto">

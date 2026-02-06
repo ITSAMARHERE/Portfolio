@@ -111,7 +111,7 @@ const Contact = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 px-4 bg-background relative overflow-hidden">
+    <section ref={ref} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
@@ -123,12 +123,12 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="heading-secondary text-foreground mb-4">
+          <h2 className="heading-secondary text-foreground mb-3 sm:mb-4">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <p className="text-muted text-lg max-w-3xl mx-auto">
+          <p className="text-muted text-base sm:text-lg max-w-3xl mx-auto">
             Open to opportunities in AI/ML engineering and full-stack development
           </p>
         </motion.div>
@@ -137,13 +137,13 @@ const Contact = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12"
         >
           {/* Contact Information */}
-          <motion.div variants={itemVariants} className="space-y-8">
+          <motion.div variants={itemVariants} className="space-y-6 sm:space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Let's start a conversation</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">Let's start a conversation</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                 I'm always interested in new opportunities and exciting projects. 
                 Whether you have a question or just want to say hi, feel free to reach out!
               </p>

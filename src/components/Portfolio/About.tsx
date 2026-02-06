@@ -31,18 +31,18 @@ const About = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 px-4 bg-background">
+    <section ref={ref} className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="container mx-auto max-w-7xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
         >
-          <h2 className="heading-secondary text-foreground mb-4">
+          <h2 className="heading-secondary text-foreground mb-3 sm:mb-4">
             About <span className="text-gradient">Me</span>
           </h2>
-          <p className="text-muted text-lg max-w-3xl mx-auto">
+          <p className="text-muted text-base sm:text-lg max-w-3xl mx-auto">
             Background, education, and technical interests
           </p>
         </motion.div>
@@ -51,7 +51,7 @@ const About = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {/* Profile Card */}
           <motion.div variants={cardVariants}>

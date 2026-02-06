@@ -36,28 +36,28 @@ const Footer = () => {
         <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-secondary rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto max-w-7xl px-4 relative z-10">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8"
         >
           {/* Brand */}
-          <motion.div variants={itemVariants} className="space-y-4">
-            <div className="text-2xl font-bold">
+          <motion.div variants={itemVariants} className="space-y-4 text-center sm:text-left">
+            <div className="text-xl sm:text-2xl font-bold">
               Amar<span className="text-primary">Pal</span>
             </div>
-            <p className="text-background/80 leading-relaxed">
+            <p className="text-background/80 leading-relaxed text-sm sm:text-base">
               AI & Machine Learning–focused Computer Science undergraduate passionate about building 
               intelligent, data-driven solutions and creating impactful technology.
             </p>
           </motion.div>
 
           {/* Quick Links */}
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold text-background">Quick Links</h3>
+          <motion.div variants={itemVariants} className="space-y-4 text-center sm:text-left">
+            <h3 className="text-base sm:text-lg font-semibold text-background">Quick Links</h3>
             <div className="grid grid-cols-2 gap-2">
               {[
                 { label: "Home", href: "#home" },
@@ -82,14 +82,14 @@ const Footer = () => {
           </motion.div>
 
           {/* Contact Info */}
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-lg font-semibold text-background">Connect</h3>
+          <motion.div variants={itemVariants} className="space-y-4 text-center sm:text-left sm:col-span-2 md:col-span-1">
+            <h3 className="text-base sm:text-lg font-semibold text-background">Connect</h3>
             <div className="space-y-2">
-              <p className="text-background/80 text-sm">tmsl.aiml.amarpal@gmail.com</p>
-              <p className="text-background/80 text-sm">+91 9693637388</p>
-              <p className="text-background/80 text-sm">Kolkata, West Bengal</p>
+              <p className="text-background/80 text-xs sm:text-sm break-words">tmsl.aiml.amarpal@gmail.com</p>
+              <p className="text-background/80 text-xs sm:text-sm">+91 9693637388</p>
+              <p className="text-background/80 text-xs sm:text-sm">Kolkata, West Bengal</p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-3 justify-center sm:justify-start">
               {[
                 { icon: Github, href: "https://github.com/ITSAMARHERE" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/amar-pal-a945ba250" },
@@ -139,9 +139,9 @@ const Footer = () => {
         viewport={{ once: true }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="absolute bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg hover:shadow-xl smooth-transition"
+        className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center shadow-lg hover:shadow-xl smooth-transition"
       >
-        <ArrowUp className="h-5 w-5 text-foreground" />
+        <ArrowUp className="h-4 w-4 sm:h-5 sm:w-5 text-foreground" />
       </motion.button>
     </footer>
   );
